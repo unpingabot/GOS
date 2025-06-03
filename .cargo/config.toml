@@ -1,0 +1,5 @@
+[build]
+target = "x86_64-gos.json"
+
+[target.x86_64-gos]
+rustflags = ["-C", "link-arg=-Tlink.ld"]
