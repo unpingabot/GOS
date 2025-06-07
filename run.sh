@@ -2,7 +2,10 @@
 set -e
 
 echo "[*] Building kernel"
-cargo +nightly build -Z build-std=core --target x86_64-gos.json
+cargo +nightly build \
+    -Z build-std=core,compiler_builtins \
+    -Z build-std-features=compiler-builtins-mem \
+    --target x86_64-gos.json
 
 echo "[*] Copying kernel to ISO folder"
 mkdir -p iso/boot/grub

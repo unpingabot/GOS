@@ -5,7 +5,6 @@
   "vendor": "unknown",
   "linker-flavor": "ld.lld",
   "disable-redzone": true,
-  "features": "-mmx,-sse,+soft-float",
   "panic-strategy": "abort",
   "executables": true,
   "relocation-model": "static",
